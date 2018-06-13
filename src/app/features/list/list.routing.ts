@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ListPageComponent } from './containers';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: './features/tabs/tabs.module#TabsModule'
+    outlet: 'list',
+    component: ListPageComponent
   }
 ];
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class ListRoutingModule { }
