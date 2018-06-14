@@ -9,7 +9,12 @@ export class SearchPageComponent implements OnInit {
 
   constructor() { }
 
+  public searchValue = '';
+
   ngOnInit() {
   }
 
+  search(): void {
+    console.log('SEARCH: ', this.searchValue);
+  }
 }

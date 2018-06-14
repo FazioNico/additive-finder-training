@@ -6,6 +6,14 @@
 
 <ion-content>
   <p>
-    hi search page
+    hi search page {{searchValue}}
   </p>
+  <input 
+    type="text"
+    class="form-control"
+    id="search"
+    [(ngModel)]="searchValue" 
+    name="search">
+
+  <ion-button (click)="search()">Rechercher</ion-button>
 </ion-content>
