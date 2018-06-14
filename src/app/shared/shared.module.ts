@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GenericHttpService } from './services/http/generic-http.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AdditiveService } from './services/additive/additive.service';
 
 @NgModule({
   imports: [
@@ -9,7 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   declarations: [],
-  providers: [GenericHttpService],
+  providers: [
+    GenericHttpService,
+    AdditiveService
+  ],
   exports: [CommonModule]
 })
 export class SharedModule { }

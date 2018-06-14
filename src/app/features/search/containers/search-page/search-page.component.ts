@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-page',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _router: Router
+  ) { }
 
   public searchValue = '';
 
@@ -20,5 +23,6 @@ export class SearchPageComponent implements OnInit {
       // TODO: display form validation error
       return;
     }
+    this._router.navigate(['/detail/' + this.searchValue]);
   }
 }
