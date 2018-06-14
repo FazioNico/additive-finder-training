@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { GenericHttpService } from '../../../../shared/services/http/generic-http.service';
 import { AdditiveService } from '../../../../shared/services/additive/additive.service';
 import { switchMap } from 'rxjs/operators';
@@ -12,11 +12,12 @@ import { Observable, of } from 'rxjs';
 })
 export class DetailPageComponent implements OnInit {
 
-  public title: Observable<any[]>;
-  public desc: Observable<any>;
+  public title$: Observable<any[]>;
+  public desc$: Observable<any>;
 
   constructor(
     private _route: ActivatedRoute,
+    private _router: Router,
     private _http: GenericHttpService,
     private _additive: AdditiveService
   ) { }
@@ -32,15 +33,20 @@ export class DetailPageComponent implements OnInit {
     this._getWikiDetail(enumber);
   }
 
+  back() {
+    this._router.navigate(['']);
+  }
+
   private _getAdditiveTitle(enumber: string): void {
-    this.title =  this._additive.load().pipe(
+    this.title$ =  this._additive.load().pipe(
       switchMap((data: any[]) =>
         of(data.find(additif => additif.id === enumber)))
     );
   }
 
   private _getWikiDetail(enumber: string): void {
-    this.desc = this._http.get('wikipedia', `/${enumber}`);
+    this.desc$ = this._http.get('wikipedia', `/e${enumber}`);
   }
+
 
 }
