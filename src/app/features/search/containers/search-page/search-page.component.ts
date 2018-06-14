@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GenericHttpService } from '../../../../shared/services/http/generic-http.service';
 
 @Component({
   selector: 'app-search-page',
@@ -8,9 +7,7 @@ import { GenericHttpService } from '../../../../shared/services/http/generic-htt
 })
 export class SearchPageComponent implements OnInit {
 
-  constructor(
-    private _http: GenericHttpService
-  ) { }
+  constructor() { }
 
   public searchValue = '';
 
@@ -23,6 +20,5 @@ export class SearchPageComponent implements OnInit {
       // TODO: display form validation error
       return;
     }
-    // faire requête http vers service...
   }
 }
