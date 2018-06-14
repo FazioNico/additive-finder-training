@@ -5,15 +5,12 @@
 </ion-header>
 
 <ion-content>
-  <p>
-    hi search page {{searchValue}}
-  </p>
-  <input 
+  <ion-input 
     type="text"
     class="form-control"
     id="search"
     [(ngModel)]="searchValue" 
-    name="search">
-
+    name="search"></ion-input>
+        
   <ion-button (click)="search()">Rechercher</ion-button>
 </ion-content>
