@@ -40,7 +40,7 @@ export class DetailPageComponent implements OnInit {
   }
 
   private _getWikiDetail(enumber: string): void {
-
+    this.desc = this._http.get('wikipedia', `/${enumber}`);
   }
 
 }
