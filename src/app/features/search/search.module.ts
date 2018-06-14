@@ -5,6 +5,7 @@ import { SearchRoutingModule } from './search.routing';
 import { SearchPageComponent } from './containers';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../../shared/shared.module';
 
 const CONTAINERS = [
   SearchPageComponent
@@ -17,6 +18,7 @@ const COMPONENTS = [
     CommonModule,
     FormsModule,
     SearchRoutingModule,
+    SharedModule,
     IonicModule
   ],
   declarations: [
