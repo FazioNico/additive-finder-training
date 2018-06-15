@@ -6,9 +6,10 @@
 
 <ion-content padding text-center>
 
-  <ion-item>
+  <ion-item margin-bottom>
     <ion-label>E</ion-label>
     <ion-input 
+      color="light" 
       type="text"
       class="form-control"
       id="search"
@@ -16,7 +17,13 @@
       name="search"></ion-input>      
   </ion-item>
 
-  <ion-button (click)="search()">
+  <ion-button 
+    margin-top
+    round 
+    fill="outline" 
+    size="large" 
+    color="light"
+    (click)="search()">
       <ion-icon name="search"></ion-icon> 
       Chercher
   </ion-button>
