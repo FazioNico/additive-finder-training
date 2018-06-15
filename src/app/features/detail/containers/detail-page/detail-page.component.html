@@ -1,34 +1,35 @@
 <ion-header>
-  <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-          <ion-button (click)="back()">
-            <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
-          </ion-button>
-      </ion-buttons>
-    <ion-title>Detail</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <ion-card *ngIf="(title$|async) as title">
-    <ion-card-header [style.background]="title.getColor">
-      <ion-card-title>E{{eNumber}}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <h1>{{title?.name}}</h1>
-      <ion-card-subtitle>{{title?.type}}</ion-card-subtitle>
-      <p>{{title.getTXT}}</p>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card *ngIf="(desc$|async) as desc">
-    <ion-card-header>
-      <ion-card-subtitle>Detail</ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-      <p>
-        {{desc?.extract}}
-      </p>
-    </ion-card-content>
-  </ion-card>
-</ion-content>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button (click)="back()">
+              <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+      <ion-title>Detail</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-card *ngIf="(title$|async) as title" text-center>
+      <ion-card-header [style.background]="title.getColor">
+        <ion-card-title [style.color]="'#fff'">E {{eNumber}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <h1>{{title?.name}}</h1>
+        <p>{{title?.type}}</p>
+        <hr/>
+        <h2 [style.color]="title.getColor">{{title.getTXT}}</h2>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-card *ngIf="(desc$|async) as desc">
+      <ion-card-header>
+        <ion-card-subtitle>Detail</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          {{desc?.extract}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
