@@ -4,13 +4,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-input 
-    type="text"
-    class="form-control"
-    id="search"
-    [(ngModel)]="searchValue" 
-    name="search"></ion-input>
+<ion-content padding text-center>
 
-  <ion-button (click)="search()">Rechercher</ion-button>
+  <ion-item>
+    <ion-label>E</ion-label>
+    <ion-input 
+      type="text"
+      class="form-control"
+      id="search"
+      [(ngModel)]="searchValue" 
+      name="search"></ion-input>      
+  </ion-item>
+
+  <ion-button (click)="search()">
+      <ion-icon name="search"></ion-icon> 
+      Chercher
+  </ion-button>
+
 </ion-content>
