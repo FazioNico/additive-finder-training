@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
@@ -10,6 +10,7 @@ import { ITools, getColor, getTXT } from '../../../../shared/utils/level-tools/l
   selector: 'app-list-page',
   templateUrl: './list-page.component.html',
   styleUrls: ['./list-page.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ListPageComponent implements OnInit {
 

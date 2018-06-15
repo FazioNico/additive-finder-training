@@ -39,8 +39,13 @@ ion-content {
   background: transparent;
 }
 
-// style all inputs
+// // style all inputs
 input.native-input.native-input-md.native-input-light.native-input-md-light {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+input {
   color: #fff;
 }
 
