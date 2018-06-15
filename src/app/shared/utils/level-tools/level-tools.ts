@@ -1,5 +1,9 @@
+export interface ITools {
+  getColor: (levelValue: string) => string;
+  getTXT: (levelValue) => string;
+}
 
-const getColor = (levelColor: string) => {
+export const getColor = (levelColor: string) => {
   let classColor = '#4caf50';
   switch (levelColor) {
     case '0':
@@ -18,7 +22,7 @@ const getColor = (levelColor: string) => {
   return classColor;
 };
 
-const getTXT = (levelColor: string) => {
+export const getTXT = (levelColor: string) => {
   let txt = 'Acceptable';
   switch (levelColor) {
     case '0':
