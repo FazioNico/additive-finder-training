@@ -12,11 +12,12 @@
 <ion-content>
   <ion-card *ngIf="(title$|async) as title">
     <ion-card-header [style.background]="title.getColor">
-      <ion-card-title>{{title?.name}}</ion-card-title>
-      <ion-card-subtitle>{{title?.type}}</ion-card-subtitle>
+      <ion-card-title>E{{eNumber}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <h1>{{title.getTXT}}</h1>
+      <h1>{{title?.name}}</h1>
+      <ion-card-subtitle>{{title?.type}}</ion-card-subtitle>
+      <p>{{title.getTXT}}</p>
     </ion-card-content>
   </ion-card>
 

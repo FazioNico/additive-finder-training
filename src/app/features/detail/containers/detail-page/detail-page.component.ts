@@ -14,6 +14,7 @@ import { getColor, getTXT, ITools } from '../../../../shared/utils/level-tools/l
 })
 export class DetailPageComponent implements OnInit {
 
+  public eNumber: string;
   public title$: Observable<any[]>;
   public desc$: Observable<any>;
   private _tools: ITools = {getColor, getTXT};
@@ -31,9 +32,10 @@ export class DetailPageComponent implements OnInit {
       // TODO: display error
       return;
     }
-    console.log(':: enumber', enumber);
-    this._getAdditiveTitle(enumber);
-    this._getWikiDetail(enumber);
+    this.eNumber = enumber;
+    console.log(':: enumber', this.eNumber);
+    this._getAdditiveTitle(this.eNumber);
+    this._getWikiDetail(this.eNumber);
   }
 
   back() {
