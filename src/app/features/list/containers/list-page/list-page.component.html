@@ -14,10 +14,10 @@
       *ngFor="let item of list$|async"
       (click)="goDetail(item.id)">
       <ion-avatar slot="start" [style.background]="item?.getColor">
-          E{{item?.id}}
+          <span [style.color]="'#fff'">E{{item?.id}}</span>
       </ion-avatar>
       <ion-label>
-        <ion-text color="primary">
+        <ion-text color="dark">
           <h2>{{item?.name}}</h2>
         </ion-text>
         <p>{{item?.type}}</p>

@@ -1,0 +1,17 @@
+
+ion-item.hydrated{
+  background: #c7c7c7!important;
+  border-bottom: 1px solid #c7c7c7!important;
+}
+
+span {
+  margin: auto;
+  display: table;
+  height: auto;
+  vertical-align: middle;
+  color: #fff;
+  transform: translateY(200%);
+}
+.input-wrapper {
+  padding-left: 20px;
+}

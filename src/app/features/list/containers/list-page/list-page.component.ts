@@ -9,7 +9,7 @@ import { ITools, getColor, getTXT } from '../../../../shared/utils/level-tools/l
 @Component({
   selector: 'app-list-page',
   templateUrl: './list-page.component.html',
-  styleUrls: ['./list-page.component.css']
+  styleUrls: ['./list-page.component.css'],
 })
 export class ListPageComponent implements OnInit {
 

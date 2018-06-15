@@ -43,3 +43,22 @@ ion-content {
 input.native-input.native-input-md.native-input-light.native-input-md-light {
   color: #fff;
 }
+
+// style list
+.item-md {
+  padding: 0!important;
+}
+ion-item.inner{
+  padding-left: 10px;
+}
+.item-md ion-avatar {
+  width: 100px!important;
+  height: 100px!important;
+}
+.item-md ion-avatar[slot=start], 
+.item-md ion-thumbnail[slot=start] {
+  margin: 0!important;
+}
+.avatar-md {
+  border-radius: 0!important;
+}
