@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ListRoutingModule } from './list.routing';
 import { IonicModule } from '@ionic/angular';
 import { ListPageComponent } from './containers';
+import { SharedModule } from '../../shared/shared.module';
 
 const CONTAINERS = [
   ListPageComponent
@@ -16,6 +17,7 @@ const COMPONENTS = [
   imports: [
     CommonModule,
     ListRoutingModule,
+    SharedModule,
     IonicModule
   ],
   declarations: [

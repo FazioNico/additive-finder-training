@@ -5,7 +5,26 @@
 </ion-header>
 
 <ion-content>
-  <p>
-    hi list page
-  </p>
+
+  <ion-list>
+
+    <ion-item 
+      text-wrap
+      button
+      detail
+      *ngFor="let item of list$|async"
+      (click)="goDetail(item.id)">
+      <ion-avatar slot="start">
+          E{{item?.id}}
+      </ion-avatar>
+      <ion-label>
+        <ion-text color="primary">
+          <h2>{{item?.name}}</h2>
+        </ion-text>
+        <p>{{item?.type}}</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+  
 </ion-content>
